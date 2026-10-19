@@ -1,3 +1,7 @@
 ---
-return Astro.redirect('/cs/',302);
+// On Netlify, netlify.toml redirects "/" by Accept-Language before this page is served.
+// This page is the fallback (local dev, preview, other hosts): German device → /de/, otherwise /cs/.
 ---
+<!doctype html><html lang="cs"><head><meta charset="utf-8"/><meta name="robots" content="noindex"/><link rel="canonical" href="https://verakrupickova.cz/cs/"/><title>Věra Krupičková</title>
+<script is:inline>location.replace(/^de\b/i.test(navigator.language||'')?'/de/':'/cs/');</script>
+<noscript><meta http-equiv="refresh" content="0;url=/cs/"/></noscript></head><body><a href="/cs/">Česky</a> · <a href="/de/">Deutsch</a></body></html>
