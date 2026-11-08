@@ -1,0 +1,66 @@
+---
+// Netlify serves /404.html automatically for all unmatched paths — no extra config needed.
+---
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="theme-color" content="#f7f6f2"/>
+  <meta name="robots" content="noindex"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet"/>
+  <title>Stránka nenalezena — Věra Krupičková</title>
+  <style>
+    :root{font-family:'Manrope',sans-serif;background:#f7f6f2;color:#181817}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;display:flex;flex-direction:column}
+    a{color:inherit;text-decoration:none}::selection{background:#d8d0c1}
+    .w{width:calc(100% - clamp(36px,6.25vw,240px));max-width:2500px;margin-inline:auto}
+    .hd{height:78px;display:flex;align-items:center}
+    .brand{font-size:clamp(11px,.75vw,15px);font-weight:700;letter-spacing:.12em;white-space:nowrap}
+    .brand:hover{opacity:.55}
+    main{flex:1;display:flex;align-items:center}
+    .content{padding-block:clamp(50px,8vh,110px)}
+    .n404{font-family:'Playfair Display',Georgia,serif;font-weight:400;font-size:clamp(110px,19vw,340px);letter-spacing:-.065em;line-height:.92;margin:0 0 clamp(22px,3.5vh,52px)}
+    .tagline{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-size:clamp(22px,2.8vw,48px);line-height:1.3;margin:0 0 clamp(16px,2.5vh,34px)}
+    .copy{color:#797772;font-size:clamp(13px,.95vw,17px);line-height:1.8;max-width:430px;margin:0 0 clamp(44px,6vh,88px);display:flex;flex-direction:column;gap:.2em}
+    .back{display:inline-flex;align-items:center;gap:clamp(28px,3vw,70px);border-bottom:1px solid #292723;padding-bottom:13px;font-size:clamp(10px,.62vw,12px);font-weight:600;text-transform:uppercase;letter-spacing:.17em}
+    .back:hover{opacity:.55}.back .arr{font-size:18px;font-weight:400}
+    .ft{border-top:1px solid #cccac4;min-height:130px;display:flex;align-items:center}
+    .ft-in{display:flex;align-items:center;justify-content:space-between;gap:20px;width:100%}
+    .ft-brand{font-size:clamp(11px,.75vw,15px);font-weight:700;letter-spacing:.12em}
+    .ft-year{font-size:11px;color:#797772}
+    .ft-top{font-size:clamp(10px,.62vw,12px);font-weight:600;text-transform:uppercase;letter-spacing:.17em}
+    .ft-top:hover{opacity:.55}
+    @media(max-width:700px){.hd{height:95px}.ft{min-height:0;padding-block:30px}.ft-in{flex-wrap:wrap}.ft-year{order:3;width:100%}}
+  </style>
+</head>
+<body>
+  <header class="hd">
+    <div class="w">
+      <a class="brand" href="/cs/">VĚRA KRUPIČKOVÁ</a>
+    </div>
+  </header>
+  <main>
+    <div class="w">
+      <div class="content">
+        <p class="n404">404</p>
+        <p class="tagline">Stránka odešla na plenér.</p>
+        <div class="copy">
+          <span>Věra tohle URL zamalovala.</span>
+          <span>Negativní prostor je taky umění — ale zpátky domů vede tato šipka.</span>
+        </div>
+        <a class="back" href="/cs/">Zpět domů <span class="arr" aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </main>
+  <footer class="ft">
+    <div class="w ft-in">
+      <strong class="ft-brand">VĚRA KRUPIČKOVÁ</strong>
+      <span class="ft-year">© {new Date().getFullYear()}</span>
+      <a class="ft-top" href="/cs/">↑ TOP</a>
+    </div>
+  </footer>
+</body>
+</html>
