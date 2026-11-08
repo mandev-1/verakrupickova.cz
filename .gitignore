@@ -1,0 +1,13 @@
+# Node dependencies
+node_modules/
+
+# Astro generated files
+.astro/
+dist/
+
+# Package manager logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+bun-debug.log*
