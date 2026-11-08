@@ -1,2 +1,8 @@
 import { defineConfig } from 'astro/config';
-export default defineConfig({ site: 'https://verakrupickova.cz', output: 'static' });
+import sitemap from '@astrojs/sitemap';
+
+export default defineConfig({
+  site: 'https://verakrupickova.cz',
+  output: 'static',
+  integrations: [sitemap()],
+});
